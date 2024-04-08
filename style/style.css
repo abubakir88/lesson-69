@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  max-width: 400px;
+  max-width: 1000px;
   width: 100%;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -28,7 +28,7 @@ h1 {
 }
 
 input[type=text] {
-  width: calc(100% - 80px);
+  width: calc(100% - 100px);
   padding: 10px;
   border: 1px solid #ced4da;
   border-radius: 5px;
@@ -37,14 +37,13 @@ input[type=text] {
 }
 
 button {
-  padding: 4px;
+  padding: 12px 6px;
   border: none;
   background-color: #007bff;
   color: #fff;
   cursor: pointer;
   border-radius: 5px;
 }
-
 button:hover {
   background-color: #0056b3;
 }
@@ -53,8 +52,7 @@ ul {
   list-style-type: none;
   padding: 0;
 }
-
-li {
+ul li {
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
@@ -62,12 +60,11 @@ li {
   border-radius: 4px;
   font-size: 20px;
 }
-li:hover {
+ul li:hover {
   background-color: #ddd;
   transition: 0.2s;
 }
-
-li button {
+ul li button {
   padding: 8px 10px;
   background-color: #dc3545;
   color: #fff;
@@ -75,7 +72,6 @@ li button {
   cursor: pointer;
   border-radius: 5px;
 }
-
-li button:hover {
+ul li button:hover {
   background-color: #c82333;
 }/*# sourceMappingURL=style.css.map */

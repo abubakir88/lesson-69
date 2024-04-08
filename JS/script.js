@@ -1,9 +1,7 @@
-// Boshlang'ich holat
 const initialState = {
   todos: JSON.parse(localStorage.getItem("todos")) || [],
 };
 
-// Reducer funksiyasi
 function todosReducer(state = initialState, action) {
   switch (action.type) {
     case "ADD_TODO":
@@ -23,7 +21,6 @@ function todosReducer(state = initialState, action) {
 
 const store = Redux.createStore(todosReducer);
 
-// Har safar state o'zgarganda, yangilangan state'ni localStorage'ga saqlaymiz
 store.subscribe(() => {
   localStorage.setItem("todos", JSON.stringify(store.getState().todos));
 });
@@ -72,10 +69,8 @@ window.removeTodo = function (id) {
   }
 };
 
-// Dasturni boshlash
 renderTodos();
 
-// Reducer funksiyasi
 function todosReducer(state = initialState, action) {
   switch (action.type) {
     case "ADD_TODO":
@@ -100,7 +95,6 @@ function todosReducer(state = initialState, action) {
   }
 }
 
-// Todo o'zgartirish uchun action
 function editTodoAction(todo) {
   return {
     type: "EDIT_TODO",
@@ -108,7 +102,6 @@ function editTodoAction(todo) {
   };
 }
 
-// Edit tugmasini qo'shish
 function editTodoHtml(id) {
   const todo = store.getState().todos.find((todo) => todo.id === id);
   const newText = prompt("Enter new text:", todo.text);
